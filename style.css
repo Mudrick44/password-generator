@@ -1,0 +1,119 @@
+body{
+    background-color: #003049;
+    color: #fdf0d5;
+}
+
+
+.main-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    margin-top: 52px;
+}
+.pass-display{
+    border: 1px solid white;
+    width: 180px;
+    padding: 22px;
+    display: flex;
+    align-items: self-end;
+    justify-content: space-between;
+    margin-bottom: 12px;
+
+}
+.copybtn{
+  background-color: transparent;
+  border: none;
+}
+img{
+  color: #fff;
+}
+.input-range {
+    -webkit-appearance: none;
+    appearance: none;
+    height: 10px;
+    background-color: #d3d3d3; /* Gray background color */
+    outline: none;
+    border-radius: 5px;
+    width: 100%;
+  }
+
+  .input-range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background-color: #3498db; /* Blue color for the slider thumb */
+    border-radius: 50%;
+    cursor: pointer;
+  }
+.condition-wrapper{
+    border: 1px solid white;
+    padding: 24px;
+}
+.condition-header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.conditions{
+    display: flex;
+    justify-content: space-between;
+    gap: 2px;
+}
+
+#password-strength-container {
+    display: none;
+    width:200px;
+    margin: 10px;
+    
+
+  }
+
+  .progress-bar {
+    height: 20px;
+    margin-bottom: 10px;
+    display: flex;
+  }
+
+  .bar {
+    flex-grow: 1;
+    height: 100%;
+    transition: background-color 0.3s ease;
+  }
+
+  .bar-weak {
+    background-color: #ff6347; /* Red */
+  }
+
+  .bar-moderate {
+    background-color: #ffa500; /* Orange */
+  }
+
+  .bar-strong {
+    background-color: #ffd700; /* Yellow */
+  }
+
+  .bar-very-strong {
+    background-color: #7cfc00; /* Green */
+  }
+  .strength{
+    margin-bottom: 12px;
+  }
+  .generate-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    width: 100%;
+    border-radius: 5px;
+    background-color: #3498db; /* Blue color */
+    color: #fff; /* White text color */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .generate-button:hover {
+    background-color: #2980b9; /* Darker blue color on hover */
+  }
