@@ -1,61 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-    <script src="index.js"></script>
-  </head>
-  <body>
-    <div class="main-wrapper">
-      <div class="title">Password Generator</div>
-      <div class="pass-display">
-        <div class="pass" id="pass"></div>
-        <button class="copybtn" id="copybtn" onclick="copypass()"><span><img src="copy.png" width="18px" alt=""></span></button>
-      </div>
-      <div class="condition-wrapper">
-        <div class="condition-header">
-          <div>Character Length</div>
-          <div class="length-display" id="length-display">0</div>
-        </div>
-        <input
-          type="range"
-          class="input-range"
-          name="character-length"
-          id="character-length"
-          min="0"
-          max="16"
-          value="0"
-        />
-        <div class="conditions">
-          <input type="checkbox" name="uppercase" id="uppercase" />
-          <p>Include upper case letters</p>
-        </div>
-        <div class="conditions">
-          <input type="checkbox" name="lowercase" id="lowercase" />
-          <p>Include lowercase letters</p>
-        </div>
-        <div class="conditions">
-          <input type="checkbox" name="numbers" id="numbers" />
-          <p>Include Number characters</p>
-        </div>
-        <div class="conditions">
-          <input type="checkbox" name="symbols" id="symbols" />
-          <p>Include symbol character</p>
-        </div>
-        <div class="strength">Strength</div>
-        <div id="password-strength-container">
-          <div class="progress-bar">
-            <div class="bar bar-weak" id="weak"></div>
-            <div class="bar bar-moderate" id="moderate"></div>
-            <div class="bar bar-strong" id="strong"></div>
-            <div class="bar bar-very-strong" id="verystrong"></div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password validator</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <ul>
+            <li>Password validator</li>
+            <li><a href="passwordgenerator.html" class="generatebtn">Generate password</a></li>
+        </ul>
+    </header>
+
+    <div class="hero-section">
+        <div class="hero-content">
+            <h1>Password Validator App</h1>
+            <p>Check the validity and strength of your passwords with our app. Ensure your online accounts are secure.</p>
           </div>
-        </div> 
-        <button class="generate-button" id="generatepass" onclick="generatepass()">Generate</button>
+        </div>
+    </div>
+    <div class="input-container">
+        <input type="text" id="passwordInput" placeholder="Enter your password..." oninput="checkInput()">
+        <button id="checkButton" disabled onclick="checkPasswordStrength()">Check</button>
+      </div>  
+      <div class="loader-container">
+        <div class="loader" id="loader" style="display: none;"></div>
       </div>
       
+      <div id="display-strength">
+      </div>
+      <div id="security-facts">
+        <div class="fact"><span class="tick">&#10004;</span> Use a unique password for each account.</div>
+        <div class="fact"><span class="tick">&#10004;</span> Enable two-factor authentication where available.</div>
+        <div class="fact"><span class="tick">&#10004;</span> Regularly update your passwords.</div>
+        <div class="fact"><span class="tick">&#10004;</span> Avoid using common or easily guessable passwords.</div>
+        <div class="fact"><span class="tick">&#10004;</span> Use a reputable password manager to securely store passwords.</div>
     </div>
-  </body>
+      
+        
+</body>
 </html>
