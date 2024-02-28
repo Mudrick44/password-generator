@@ -1,4 +1,4 @@
-# password-generator
+# password-validator & Generator
 This project aims to enhance password security awareness and provide users with tools to generate strong and secure passwords. The system functions by allowing users to input their desired passwords, which are then evaluated based on various criteria to determine their strength. Additionally, users are provided with valuable insights into the security level of their passwords through a points-based system.
 The Password Generator is a simple web-based tool that allows users to create strong and secure passwords by selecting various conditions such as uppercase characters, lowercase characters, symbols, and numbers.
 ## Features
